@@ -73,7 +73,6 @@ module HarvestNotifier
         id = report["user_id"]
 
         reported_hours = report["total_hours"].to_f
-
         if users[id].present?
           users[id]["missing_hours"] -= reported_hours
           users[id]["total_hours"] += reported_hours
